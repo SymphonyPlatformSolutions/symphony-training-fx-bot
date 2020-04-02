@@ -1,0 +1,14 @@
+server:
+    port: 8080
+    servlet:
+        display-name: fxbot
+        context-path: /fxbot
+resources: src/main/resources
+certs: certs
+bot-config: '${resources}/bot-config.json'
+logging:
+    file: '${resources}/logs/fxbot.log'
+    level:
+        ROOT: INFO
+        com.symphony.bdk.bot.sdk: DEBUG
+        com.symphony.certification.fxbot: DEBUG

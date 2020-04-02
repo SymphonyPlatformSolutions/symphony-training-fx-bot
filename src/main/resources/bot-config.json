@@ -1,0 +1,21 @@
+{
+  "sessionAuthHost": "develop2.symphony.com",
+  "sessionAuthPort": 443,
+  "keyAuthHost": "develop2.symphony.com",
+  "keyAuthPort": 443,
+  "podHost": "develop2.symphony.com",
+  "podPort": 443,
+  "agentHost": "develop2.symphony.com",
+  "agentPort": 443,
+  "appId": "",
+  "appPrivateKeyPath": "certs/",
+  "appPrivateKeyName": "fxbot_privatekey.pkcs8",
+  "botPrivateKeyPath": "certs/",
+  "botPrivateKeyName": "fxbot_privatekey.pkcs8",
+  "botUsername": "fxBot",
+  "authTokenRefreshPeriod": "30",
+  "authenticationFilterUrlPattern": "/secure/",
+  "showFirehoseErrors": false,
+  "connectionTimeout": 45000,
+  "botEmailAddress": "fxBot@symphony.com"
+}
