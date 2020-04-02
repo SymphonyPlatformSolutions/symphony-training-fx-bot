@@ -1,0 +1,24 @@
+2020-04-02 16:12:03,530 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 19947 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-04-02 16:12:03,532 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-04-02 16:12:03,532 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-04-02 16:12:04,890 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 2 beans
+2020-04-02 16:12:04,937 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-04-02 16:12:04,984 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-04-02 16:12:05,030 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-04-02 16:12:05,075 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-04-02 16:12:05,126 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-04-02 16:12:05,188 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 8 beans
+2020-04-02 16:12:05,596 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-04-02 16:12:05,606 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-04-02 16:12:05,606 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-04-02 16:12:05,606 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-04-02 16:12:05,700 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-04-02 16:12:05,700 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2128 ms
+2020-04-02 16:12:05,714 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-04-02 16:12:05,769 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-04-02 16:12:05,812 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-04-02 16:12:05,813 INFO [main] authentication.SymBotRSAAuth: Now is 1585858325813
+2020-04-02 16:12:06,926 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-04-02 16:12:06,926 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-04-02 16:12:06,927 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-04-02 16:12:06,927 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds

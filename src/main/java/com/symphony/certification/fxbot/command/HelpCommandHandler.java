@@ -14,7 +14,8 @@ import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
  */
 public class HelpCommandHandler extends CommandHandler {
 
-  private static final String[] DESCRIPTIONS = {
+    private static final String[] DESCRIPTIONS = {
+      "/addtowatchlist - auto generated help message",
       "/hello - simple hello command",
       "/help - displays the list of commands",
       "/create notification - generates details on how to receive notification in this room",
