@@ -5,7 +5,7 @@ import com.symphony.bdk.bot.sdk.command.model.BotCommand;
 import com.symphony.bdk.bot.sdk.lib.jsonmapper.JsonMapper;
 import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
 import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
-
+import com.symphony.certification.fxbot.command.dataservice.DataService;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
