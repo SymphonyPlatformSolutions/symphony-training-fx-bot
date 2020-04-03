@@ -1,20 +1,21 @@
 package com.symphony.certification.fxbot.command;
 
+import com.symphony.bdk.bot.sdk.command.CommandHandler;
+import com.symphony.bdk.bot.sdk.command.model.BotCommand;
+import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
-
-import com.symphony.bdk.bot.sdk.command.CommandHandler;
-import com.symphony.bdk.bot.sdk.command.model.BotCommand;
-import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
 
 /**
  * Sample code. Help command to return the list of available commands
  */
 public class HelpCommandHandler extends CommandHandler {
 
-    private static final String[] DESCRIPTIONS = {
+      private static final String[] DESCRIPTIONS = {
+      "/fxelement - auto generated help message",
       "/addtowatchlist - auto generated help message",
       "/hello - simple hello command",
       "/help - displays the list of commands",
