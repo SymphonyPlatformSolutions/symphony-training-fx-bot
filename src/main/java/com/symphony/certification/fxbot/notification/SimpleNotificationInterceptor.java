@@ -1,14 +1,13 @@
 package com.symphony.certification.fxbot.notification;
 
-import java.util.Map;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.symphony.bdk.bot.sdk.lib.jsonmapper.JsonMapper;
 import com.symphony.bdk.bot.sdk.notification.NotificationInterceptor;
 import com.symphony.bdk.bot.sdk.notification.model.NotificationRequest;
 import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 /**
  * Sample code. Demonstrates how to extend {@link NotificationInterceptor} to
@@ -39,11 +38,7 @@ public class SimpleNotificationInterceptor extends NotificationInterceptor {
     if (streamId != null) {
       notificationRequest.setStreamId(streamId);
       Map<String, String> data = jsonMapper.toObject(notificationRequest.getPayload(), Map.class);
-      notificationMessage.setEnrichedMessage(
-          "<b>Notification received:</b><br />" + notificationRequest.getPayload(), // Default message when extension app not present
-          "com.symphony.ms.notification", // Root node in the payload received in extension app
-          data, // payload received in extension app
-          "1.0"); // version
+      notificationMessage.setTemplateFile("fx-notification", data);
       return true; // true if notification interception chain should continue
     }
 
