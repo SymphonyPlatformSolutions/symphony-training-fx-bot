@@ -4,8 +4,11 @@ import com.symphony.bdk.bot.sdk.command.CommandHandler;
 import com.symphony.bdk.bot.sdk.command.model.BotCommand;
 import com.symphony.bdk.bot.sdk.lib.jsonmapper.JsonMapper;
 import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
+import com.symphony.bdk.bot.sdk.lib.restclient.model.RestResponse;
 import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
 import com.symphony.certification.fxbot.command.dataservice.DataService;
+import com.symphony.certification.fxbot.command.model.InternalQuote;
+import com.symphony.certification.fxbot.command.model.QuoteResponse;
 
 import java.util.Optional;
 import java.util.function.Predicate;
@@ -40,8 +43,20 @@ public class AddToWatchlistCommandHandler extends CommandHandler {
   @Override
   public void handle(BotCommand command, SymphonyMessage response) {
     Optional<String> currency = getCommandCurrency(command.getMessageEvent().getMessage());
+    if (currency.isPresent()) {
+      RestResponse<QuoteResponse> restResponse = requestQuote(currency.get());
+      if (restResponse.getStatus() == 200){
+        QuoteResponse quoteResponse = restResponse.getBody();
+        InternalQuote iQuote = new InternalQuote(quoteResponse.getQuote());
+        this.dataService.addQuote(iQuote);
+        response.setEnrichedTemplateFile("add-quote", iQuote, "com.symphony.ms.currencyQuote",
+                iQuote, "1.0");
+      }
 
-
+    }
+    else {
+      response.setMessage("Please provide the currency you want a quote for");
+    }
   }
 
   private Optional<String> getCommandCurrency(String commandMessage){
@@ -54,4 +69,10 @@ public class AddToWatchlistCommandHandler extends CommandHandler {
     }
     return Optional.empty();
   }
+
+  private RestResponse<QuoteResponse> requestQuote(String currency){
+    return restClient.getRequest(
+            String.format(QUOTE_URL, currency), QuoteResponse.class);
+  }
+
 }
