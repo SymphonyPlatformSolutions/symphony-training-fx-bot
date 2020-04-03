@@ -6,8 +6,8 @@ import com.symphony.bdk.bot.sdk.lib.jsonmapper.JsonMapper;
 import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
 import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
 import com.symphony.certification.fxbot.command.dataservice.DataService;
-import java.util.HashMap;
-import java.util.Map;
+
+import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.regex.Pattern;
 
@@ -39,9 +39,19 @@ public class AddToWatchlistCommandHandler extends CommandHandler {
    */
   @Override
   public void handle(BotCommand command, SymphonyMessage response) {
-    Map<String, String> variables = new HashMap<>();
-    variables.put("user", command.getUser().getDisplayName());
+    Optional<String> currency = getCommandCurrency(command.getMessageEvent().getMessage());
 
-    response.setTemplateMessage("Auto generated command addtowatchlist, Hello, <b>{{user}}</b>", variables);
+
+  }
+
+  private Optional<String> getCommandCurrency(String commandMessage){
+    String[] commandSplit = commandMessage.split(" " + ADD_QUOTE_COMMAND + " ");
+    if (commandSplit.length > 1) {
+      String currency = commandSplit[1];
+      if (currency != null){
+        return Optional.of(currency);
+      }
+    }
+    return Optional.empty();
   }
 }
