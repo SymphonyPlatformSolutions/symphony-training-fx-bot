@@ -1,24 +1,618 @@
-2020-04-02 16:12:03,530 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 19947 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
-2020-04-02 16:12:03,532 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
-2020-04-02 16:12:03,532 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
-2020-04-02 16:12:04,890 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 2 beans
-2020-04-02 16:12:04,937 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
-2020-04-02 16:12:04,984 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
-2020-04-02 16:12:05,030 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
-2020-04-02 16:12:05,075 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
-2020-04-02 16:12:05,126 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
-2020-04-02 16:12:05,188 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 8 beans
-2020-04-02 16:12:05,596 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
-2020-04-02 16:12:05,606 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
-2020-04-02 16:12:05,606 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
-2020-04-02 16:12:05,606 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
-2020-04-02 16:12:05,700 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
-2020-04-02 16:12:05,700 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2128 ms
-2020-04-02 16:12:05,714 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
-2020-04-02 16:12:05,769 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
-2020-04-02 16:12:05,812 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
-2020-04-02 16:12:05,813 INFO [main] authentication.SymBotRSAAuth: Now is 1585858325813
-2020-04-02 16:12:06,926 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
-2020-04-02 16:12:06,926 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
-2020-04-02 16:12:06,927 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
-2020-04-02 16:12:06,927 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 15:44:48,089 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 87821 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-11-10 15:44:48,094 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-11-10 15:44:48,095 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-11-10 15:44:49,604 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 4 beans
+2020-11-10 15:44:49,650 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-11-10 15:44:49,688 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-11-10 15:44:49,725 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-11-10 15:44:49,764 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-11-10 15:44:49,809 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-11-10 15:44:49,860 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 10 beans
+2020-11-10 15:44:50,395 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-11-10 15:44:50,406 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-10 15:44:50,406 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-11-10 15:44:50,407 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-11-10 15:44:50,506 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-11-10 15:44:50,507 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2361 ms
+2020-11-10 15:44:50,522 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-11-10 15:44:50,584 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-11-10 15:44:50,654 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-11-10 15:44:50,654 INFO [main] authentication.SymBotRSAAuth: Now is 1605041090654
+2020-11-10 15:44:51,801 ERROR [pool-2-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 15:44:51,801 ERROR [pool-2-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 15:44:51,802 ERROR [pool-2-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 15:44:51,802 ERROR [pool-2-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 15:45:22,027 ERROR [pool-2-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 15:45:22,027 ERROR [pool-2-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 15:45:22,075 ERROR [pool-2-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 15:45:22,075 ERROR [pool-2-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:18:57,288 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 88275 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-11-10 16:18:57,291 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-11-10 16:18:57,291 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-11-10 16:18:58,798 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 4 beans
+2020-11-10 16:18:58,850 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-11-10 16:18:58,899 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-11-10 16:18:58,948 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-11-10 16:18:59,001 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-11-10 16:18:59,051 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-11-10 16:18:59,101 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 10 beans
+2020-11-10 16:18:59,530 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-11-10 16:18:59,541 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:18:59,542 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-11-10 16:18:59,542 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-11-10 16:18:59,633 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-11-10 16:18:59,633 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2288 ms
+2020-11-10 16:18:59,650 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-11-10 16:18:59,706 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-11-10 16:18:59,752 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-11-10 16:18:59,753 INFO [main] authentication.SymBotRSAAuth: Now is 1605043139753
+2020-11-10 16:19:02,906 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:02,907 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:19:05,176 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:05,177 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:19:33,231 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:33,231 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:19:37,245 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:37,245 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:19:44,913 ERROR [main] org.springframework.boot.web.embedded.tomcat.TomcatStarter: Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtCookieFilter' defined in class path resource [com/symphony/bdk/bot/sdk/webapi/security/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'jwtCookieFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configClientImpl' defined in URL [jar:file:/Users/reed.feldman/.m2/repository/com/symphony/platformsolutions/symphony-bdk-bot-sdk-java/1.0.0/symphony-bdk-bot-sdk-java-1.0.0.jar!/com/symphony/bdk/bot/sdk/symphony/ConfigClientImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'symBotClient' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Unsatisfied dependency expressed through method 'symBotClient' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symBotRSAAuth' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+2020-11-10 16:19:44,914 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Error with authentication
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at java.base/java.lang.Thread.sleep(Thread.java:339)
+	at java.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)
+	at authentication.SymBotRSAAuth.kmAuthenticate(SymBotRSAAuth.java:206)
+	at authentication.SymBotRSAAuth.kmAuthenticate(SymBotRSAAuth.java:214)
+	at authentication.SymBotRSAAuth.lambda$authenticate$1(SymBotRSAAuth.java:93)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-10 16:19:44,914 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Error with authentication
+java.lang.InterruptedException: sleep interrupted
+	at java.base/java.lang.Thread.sleep(Native Method)
+	at java.base/java.lang.Thread.sleep(Thread.java:339)
+	at java.base/java.util.concurrent.TimeUnit.sleep(TimeUnit.java:446)
+	at authentication.SymBotRSAAuth.sessionAuthenticate(SymBotRSAAuth.java:166)
+	at authentication.SymBotRSAAuth.sessionAuthenticate(SymBotRSAAuth.java:174)
+	at authentication.SymBotRSAAuth.lambda$authenticate$0(SymBotRSAAuth.java:85)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2020-11-10 16:19:44,935 INFO [main] org.apache.catalina.core.StandardService: Stopping service [Tomcat]
+2020-11-10 16:19:44,942 WARN [main] org.apache.catalina.loader.WebappClassLoaderBase: The web application [fxbot] appears to have started a thread named [pool-1-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.6/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.6/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+ java.base@11.0.6/java.net.Socket.connect(Socket.java:608)
+ java.base@11.0.6/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:285)
+ java.base@11.0.6/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+ java.base@11.0.6/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+ java.base@11.0.6/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:265)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:372)
+ java.base@11.0.6/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+ java.base@11.0.6/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1362)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1337)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:246)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector.lambda$_apply$0(HttpUrlConnector.java:358)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector$$Lambda$666/0x000000080066a040.getOutputStream(Unknown Source)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.commitStream(CommittingOutputStream.java:171)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.commitStream(CommittingOutputStream.java:165)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.write(CommittingOutputStream.java:199)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$UnCloseableOutputStream.write(WriterInterceptorExecutor.java:276)
+ app//com.fasterxml.jackson.core.json.UTF8JsonGenerator._flushBuffer(UTF8JsonGenerator.java:2136)
+ app//com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1150)
+ app//com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:923)
+ app//org.glassfish.jersey.jackson.internal.jackson.jaxrs.base.ProviderBase.writeTo(ProviderBase.java:648)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:242)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:227)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+ app//org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1115)
+ app//org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:503)
+ app//org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:485)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:360)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:258)
+ app//org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:254)
+ app//org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:736)
+ app//org.glassfish.jersey.client.JerseyInvocation$$Lambda$647/0x0000000800633440.call(Unknown Source)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+ app//org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+ app//org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:735)
+ app//org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:421)
+ app//org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:327)
+ app//authentication.SymBotRSAAuth.sessionAuthenticate(SymBotRSAAuth.java:158)
+ app//authentication.SymBotRSAAuth.sessionAuthenticate(SymBotRSAAuth.java:174)
+ app//authentication.SymBotRSAAuth.sessionAuthenticate(SymBotRSAAuth.java:174)
+ app//authentication.SymBotRSAAuth.lambda$authenticate$0(SymBotRSAAuth.java:85)
+ app//authentication.SymBotRSAAuth$$Lambda$494/0x000000080055b040.call(Unknown Source)
+ java.base@11.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@11.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+ java.base@11.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.6/java.lang.Thread.run(Thread.java:834)
+2020-11-10 16:19:44,943 WARN [main] org.apache.catalina.loader.WebappClassLoaderBase: The web application [fxbot] appears to have started a thread named [pool-1-thread-2] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.6/java.net.PlainSocketImpl.socketConnect(Native Method)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+ java.base@11.0.6/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+ java.base@11.0.6/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:403)
+ java.base@11.0.6/java.net.Socket.connect(Socket.java:608)
+ java.base@11.0.6/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:285)
+ java.base@11.0.6/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+ java.base@11.0.6/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+ java.base@11.0.6/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:265)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:372)
+ java.base@11.0.6/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+ java.base@11.0.6/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1362)
+ java.base@11.0.6/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1337)
+ java.base@11.0.6/sun.net.www.protocol.https.HttpsURLConnectionImpl.getOutputStream(HttpsURLConnectionImpl.java:246)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector.lambda$_apply$0(HttpUrlConnector.java:358)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector$$Lambda$666/0x000000080066a040.getOutputStream(Unknown Source)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.commitStream(CommittingOutputStream.java:171)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.commitStream(CommittingOutputStream.java:165)
+ app//org.glassfish.jersey.message.internal.CommittingOutputStream.write(CommittingOutputStream.java:199)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$UnCloseableOutputStream.write(WriterInterceptorExecutor.java:276)
+ app//com.fasterxml.jackson.core.json.UTF8JsonGenerator._flushBuffer(UTF8JsonGenerator.java:2136)
+ app//com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1150)
+ app//com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:923)
+ app//org.glassfish.jersey.jackson.internal.jackson.jaxrs.base.ProviderBase.writeTo(ProviderBase.java:648)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:242)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:227)
+ app//org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+ app//org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1115)
+ app//org.glassfish.jersey.client.ClientRequest.doWriteEntity(ClientRequest.java:503)
+ app//org.glassfish.jersey.client.ClientRequest.writeEntity(ClientRequest.java:485)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector._apply(HttpUrlConnector.java:360)
+ app//org.glassfish.jersey.client.internal.HttpUrlConnector.apply(HttpUrlConnector.java:258)
+ app//org.glassfish.jersey.client.ClientRuntime.invoke(ClientRuntime.java:254)
+ app//org.glassfish.jersey.client.JerseyInvocation.lambda$invoke$0(JerseyInvocation.java:736)
+ app//org.glassfish.jersey.client.JerseyInvocation$$Lambda$647/0x0000000800633440.call(Unknown Source)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+ app//org.glassfish.jersey.internal.Errors.process(Errors.java:205)
+ app//org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:390)
+ app//org.glassfish.jersey.client.JerseyInvocation.invoke(JerseyInvocation.java:735)
+ app//org.glassfish.jersey.client.JerseyInvocation$Builder.method(JerseyInvocation.java:421)
+ app//org.glassfish.jersey.client.JerseyInvocation$Builder.post(JerseyInvocation.java:327)
+ app//authentication.SymBotRSAAuth.kmAuthenticate(SymBotRSAAuth.java:198)
+ app//authentication.SymBotRSAAuth.kmAuthenticate(SymBotRSAAuth.java:214)
+ app//authentication.SymBotRSAAuth.kmAuthenticate(SymBotRSAAuth.java:214)
+ app//authentication.SymBotRSAAuth.lambda$authenticate$1(SymBotRSAAuth.java:93)
+ app//authentication.SymBotRSAAuth$$Lambda$495/0x000000080055b440.call(Unknown Source)
+ java.base@11.0.6/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@11.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+ java.base@11.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.6/java.lang.Thread.run(Thread.java:834)
+2020-11-10 16:19:44,945 WARN [main] org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-11-10 16:19:44,957 INFO [main] org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener: 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-10 16:19:44,959 ERROR [main] org.springframework.boot.SpringApplication: Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.symphony.certification.fxbot.BotApplication.main(BotApplication.java:17)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:126)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtCookieFilter' defined in class path resource [com/symphony/bdk/bot/sdk/webapi/security/config/SecurityConfig.class]: Unsatisfied dependency expressed through method 'jwtCookieFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configClientImpl' defined in URL [jar:file:/Users/reed.feldman/.m2/repository/com/symphony/platformsolutions/symphony-bdk-bot-sdk-java/1.0.0/symphony-bdk-bot-sdk-java-1.0.0.jar!/com/symphony/bdk/bot/sdk/symphony/ConfigClientImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'symBotClient' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Unsatisfied dependency expressed through method 'symBotClient' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symBotRSAAuth' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:96)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:85)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:253)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:227)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:459)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'configClientImpl' defined in URL [jar:file:/Users/reed.feldman/.m2/repository/com/symphony/platformsolutions/symphony-bdk-bot-sdk-java/1.0.0/symphony-bdk-bot-sdk-java-1.0.0.jar!/com/symphony/bdk/bot/sdk/symphony/ConfigClientImpl.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'symBotClient' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Unsatisfied dependency expressed through method 'symBotClient' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symBotRSAAuth' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 53 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'symBotClient' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Unsatisfied dependency expressed through method 'symBotClient' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symBotRSAAuth' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 67 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'symBotRSAAuth' defined in class path resource [com/symphony/bdk/bot/sdk/symphony/config/SymphonyConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1207)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
+	... 81 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [authentication.SymBotRSAAuth]: Factory method 'symBotRSAAuth' threw exception; nested exception is exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 95 common frames omitted
+Caused by: exceptions.AuthenticationException: java.lang.Exception: Timeout
+	at authentication.SymBotRSAAuth.authenticate(SymBotRSAAuth.java:109)
+	at com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig.symBotRSAAuth(SymphonyConfig.java:73)
+	at com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig$$EnhancerBySpringCGLIB$$3391d1bf.CGLIB$symBotRSAAuth$3(<generated>)
+	at com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig$$EnhancerBySpringCGLIB$$3391d1bf$$FastClassBySpringCGLIB$$5746fae6.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig$$EnhancerBySpringCGLIB$$3391d1bf.symBotRSAAuth(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 96 common frames omitted
+Caused by: java.lang.Exception: Timeout
+	... 108 common frames omitted
+2020-11-10 16:19:45,165 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:45,166 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:19:45,189 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:19:45,189 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:20:15,440 ERROR [pool-1-thread-1] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:20:15,440 ERROR [pool-1-thread-1] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:20:15,467 ERROR [pool-1-thread-2] clients.symphony.api.APIClient: User unauthorized, refreshing tokens
+2020-11-10 16:20:15,467 ERROR [pool-1-thread-2] authentication.SymBotRSAAuth: Unexpected error, retry authentication in 30 seconds
+2020-11-10 16:20:44,042 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 88296 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-11-10 16:20:44,045 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-11-10 16:20:44,045 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-11-10 16:20:45,535 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 4 beans
+2020-11-10 16:20:45,592 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-11-10 16:20:45,647 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-11-10 16:20:45,705 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-11-10 16:20:45,765 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-11-10 16:20:45,830 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-11-10 16:20:45,884 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 10 beans
+2020-11-10 16:20:46,352 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-11-10 16:20:46,363 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:20:46,363 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-11-10 16:20:46,363 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-11-10 16:20:46,463 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-11-10 16:20:46,463 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2353 ms
+2020-11-10 16:20:46,479 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-11-10 16:20:46,532 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-11-10 16:20:46,576 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-11-10 16:20:46,577 INFO [main] authentication.SymBotRSAAuth: Now is 1605043246577
+2020-11-10 16:20:51,635 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Initializing bot client...
+2020-11-10 16:20:51,645 INFO [main] clients.SymBotClient: Authenticated as fxBot (349026222349201)
+2020-11-10 16:20:51,663 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating extension app...
+2020-11-10 16:20:53,677 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Initializing REST client
+2020-11-10 16:20:53,679 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Setting read and connect timeouts to: 35000 ms
+2020-11-10 16:20:53,742 INFO [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Registering Symphony health status to Prometheus endpoint
+2020-11-10 16:20:53,743 DEBUG [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Performing health check for Symphony components (prometheus)
+2020-11-10 16:20:54,242 DEBUG [main] com.symphony.bdk.bot.sdk.lib.restclient.RestClientImpl: Performing request GET https://develop2.symphony.com/pod/v1/podcert
+2020-11-10 16:20:55,298 INFO [main] com.symphony.bdk.bot.sdk.extapp.authentication.UserInfoFilter: Initializing UserInfo Filter
+2020-11-10 16:20:55,299 INFO [main] authentication.jwt.AuthenticationFilter: Starting authentication filter
+2020-11-10 16:20:55,625 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [spreadsheetUpdateEvent, spreadsheetPresenceEvent]
+2020-11-10 16:20:55,634 INFO [main] com.symphony.bdk.bot.sdk.lib.templating.config.TemplateServiceConfig: Initializing Template Engine
+2020-11-10 16:20:55,752 INFO [main] com.symphony.bdk.bot.sdk.lib.jsonmapper.config.JsonMapperConfig: Initializing JSON mapper
+2020-11-10 16:20:55,864 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding IM listener
+2020-11-10 16:20:55,865 INFO [main] services.DatafeedEventsService: No previous datafeed id file
+2020-11-10 16:20:55,865 INFO [main] clients.symphony.api.DatafeedClient: Creating new datafeed for bot fxBot..
+2020-11-10 16:20:56,068 INFO [main] clients.symphony.api.DatafeedClient: Created new datafeed 12188ba2-666e-4d7c-a4cb-be9a527c76c7 for bot fxBot
+2020-11-10 16:20:56,073 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Room listener
+2020-11-10 16:20:56,073 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Elements listener
+2020-11-10 16:20:56,349 INFO [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/monitor'
+2020-11-10 16:20:56,496 INFO [main] com.symphony.bdk.bot.sdk.webapi.accesscontrol.BasicAuthConfig: No Auth info!
+2020-11-10 16:20:56,500 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2020-11-10 16:20:56,538 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@444720b7, org.springframework.security.web.context.SecurityContextPersistenceFilter@c8d20bb, org.springframework.security.web.header.HeaderWriterFilter@a904e64, org.springframework.security.web.authentication.logout.LogoutFilter@2060df8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@59f56892, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c89fdd8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@529fda9f, org.springframework.security.web.session.SessionManagementFilter@240c626d, org.springframework.security.web.access.ExceptionTranslationFilter@571b4bf6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4dcc0e3d]
+2020-11-10 16:20:56,544 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SseConfig: Initializing SSE thread pool
+2020-11-10 16:20:56,545 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:20:56,547 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'sseTaskExecutor'
+2020-11-10 16:20:56,550 INFO [main] com.symphony.bdk.bot.sdk.event.config.AsyncConfig: Initializing bot thread pool
+2020-11-10 16:20:56,551 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:20:56,552 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'botTaskExecutor'
+2020-11-10 16:20:56,571 INFO [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-10 16:20:56,791 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:20:56,792 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:20:56,792 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: quo-register-form
+2020-11-10 16:20:56,796 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.BlahHandler
+2020-11-10 16:20:56,796 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.BlahHandler
+2020-11-10 16:20:56,796 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: blah
+2020-11-10 16:20:56,802 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:20:56,802 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:20:56,802 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: template-form
+2020-11-10 16:20:56,806 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:20:56,806 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:20:56,806 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: fxelement
+2020-11-10 16:20:56,809 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:20:56,812 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:20:56,817 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [event1, event2]
+2020-11-10 16:20:56,822 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:20:56,822 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:20:56,825 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:20:56,825 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:20:56,828 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:20:56,829 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:20:56,831 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:20:56,832 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:20:56,835 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:20:56,835 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering default filter: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:20:56,840 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:20:56,840 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:20:56,843 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:20:56,843 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:20:56,848 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:20:56,848 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:20:56,851 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:20:56,851 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:20:56,854 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:20:56,854 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:20:56,869 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Context refreshed
+2020-11-10 16:20:56,885 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+2020-11-10 16:20:56,933 INFO [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner: Scanning for api listing references
+2020-11-10 16:20:57,113 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:20:57,136 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/fxbot'
+2020-11-10 16:20:57,141 INFO [main] com.symphony.certification.fxbot.BotApplication: Started BotApplication in 13.785 seconds (JVM running for 14.251)
+2020-11-10 16:23:12,214 INFO [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Shutting down ExecutorService 'botTaskExecutor'
+2020-11-10 16:23:12,215 INFO [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Shutting down ExecutorService 'sseTaskExecutor'
+2020-11-10 16:23:12,231 INFO [SpringContextShutdownHook] com.symphony.bdk.bot.sdk.extapp.authentication.UserInfoFilter: Destroying UserInfo Filter
+2020-11-10 16:23:12,231 INFO [SpringContextShutdownHook] authentication.jwt.AuthenticationFilter: Destroying authentication filter
+2020-11-10 16:23:41,399 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 88368 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-11-10 16:23:41,401 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-11-10 16:23:41,402 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-11-10 16:23:42,928 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 3 beans
+2020-11-10 16:23:42,973 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-11-10 16:23:43,018 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-11-10 16:23:43,062 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-11-10 16:23:43,108 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-11-10 16:23:43,152 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-11-10 16:23:43,196 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 10 beans
+2020-11-10 16:23:43,629 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-11-10 16:23:43,641 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:23:43,641 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-11-10 16:23:43,642 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-11-10 16:23:43,749 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-11-10 16:23:43,749 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2304 ms
+2020-11-10 16:23:43,764 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-11-10 16:23:43,821 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-11-10 16:23:43,867 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-11-10 16:23:43,867 INFO [main] authentication.SymBotRSAAuth: Now is 1605043423867
+2020-11-10 16:23:45,005 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Initializing bot client...
+2020-11-10 16:23:45,015 INFO [main] clients.SymBotClient: Authenticated as fxBot (349026222349201)
+2020-11-10 16:23:45,029 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating extension app...
+2020-11-10 16:23:45,348 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Initializing REST client
+2020-11-10 16:23:45,349 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Setting read and connect timeouts to: 35000 ms
+2020-11-10 16:23:45,414 INFO [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Registering Symphony health status to Prometheus endpoint
+2020-11-10 16:23:45,415 DEBUG [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Performing health check for Symphony components (prometheus)
+2020-11-10 16:23:46,314 DEBUG [main] com.symphony.bdk.bot.sdk.lib.restclient.RestClientImpl: Performing request GET https://develop2.symphony.com/pod/v1/podcert
+2020-11-10 16:23:46,845 INFO [main] com.symphony.bdk.bot.sdk.extapp.authentication.UserInfoFilter: Initializing UserInfo Filter
+2020-11-10 16:23:46,846 INFO [main] authentication.jwt.AuthenticationFilter: Starting authentication filter
+2020-11-10 16:23:47,599 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [spreadsheetUpdateEvent, spreadsheetPresenceEvent]
+2020-11-10 16:23:47,606 INFO [main] com.symphony.bdk.bot.sdk.lib.templating.config.TemplateServiceConfig: Initializing Template Engine
+2020-11-10 16:23:47,711 INFO [main] com.symphony.bdk.bot.sdk.lib.jsonmapper.config.JsonMapperConfig: Initializing JSON mapper
+2020-11-10 16:23:47,820 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding IM listener
+2020-11-10 16:23:47,821 INFO [main] services.DatafeedEventsService: Using previous datafeed id: 12188ba2-666e-4d7c-a4cb-be9a527c76c7
+2020-11-10 16:23:47,825 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Room listener
+2020-11-10 16:23:47,825 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Elements listener
+2020-11-10 16:23:48,113 INFO [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/monitor'
+2020-11-10 16:23:48,276 INFO [main] com.symphony.bdk.bot.sdk.webapi.accesscontrol.BasicAuthConfig: No Auth info!
+2020-11-10 16:23:48,281 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2020-11-10 16:23:48,322 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dd8b40e, org.springframework.security.web.context.SecurityContextPersistenceFilter@571b4bf6, org.springframework.security.web.header.HeaderWriterFilter@2f08e6d3, org.springframework.security.web.authentication.logout.LogoutFilter@7d018c58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@a904e64, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@68e6856c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4101e146, org.springframework.security.web.session.SessionManagementFilter@771b2b5b, org.springframework.security.web.access.ExceptionTranslationFilter@5dfd4fac, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@29becf8b]
+2020-11-10 16:23:48,328 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SseConfig: Initializing SSE thread pool
+2020-11-10 16:23:48,329 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:23:48,331 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'sseTaskExecutor'
+2020-11-10 16:23:48,335 INFO [main] com.symphony.bdk.bot.sdk.event.config.AsyncConfig: Initializing bot thread pool
+2020-11-10 16:23:48,335 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:23:48,336 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'botTaskExecutor'
+2020-11-10 16:23:48,355 INFO [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-10 16:23:48,587 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:23:48,588 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:23:48,588 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: quo-register-form
+2020-11-10 16:23:48,594 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:23:48,595 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:23:48,595 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: template-form
+2020-11-10 16:23:48,599 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:23:48,600 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:23:48,600 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: fxelement
+2020-11-10 16:23:48,603 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:23:48,606 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:23:48,612 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [event1, event2]
+2020-11-10 16:23:48,617 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:23:48,617 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:23:48,620 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:23:48,621 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:23:48,624 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:23:48,624 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:23:48,627 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:23:48,627 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:23:48,631 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:23:48,631 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering default filter: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:23:48,635 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:23:48,635 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:23:48,638 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:23:48,638 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:23:48,643 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:23:48,643 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:23:48,646 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:23:48,646 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:23:48,650 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:23:48,650 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:23:48,665 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Context refreshed
+2020-11-10 16:23:48,679 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+2020-11-10 16:23:48,728 INFO [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner: Scanning for api listing references
+2020-11-10 16:23:48,911 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:23:48,935 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/fxbot'
+2020-11-10 16:23:48,940 INFO [main] com.symphony.certification.fxbot.BotApplication: Started BotApplication in 8.119 seconds (JVM running for 8.604)
+2020-11-10 16:23:55,948 INFO [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Shutting down ExecutorService 'botTaskExecutor'
+2020-11-10 16:23:55,949 INFO [SpringContextShutdownHook] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Shutting down ExecutorService 'sseTaskExecutor'
+2020-11-10 16:23:55,964 INFO [SpringContextShutdownHook] com.symphony.bdk.bot.sdk.extapp.authentication.UserInfoFilter: Destroying UserInfo Filter
+2020-11-10 16:23:55,964 INFO [SpringContextShutdownHook] authentication.jwt.AuthenticationFilter: Destroying authentication filter
+2020-11-10 16:26:58,436 INFO [main] com.symphony.certification.fxbot.BotApplication: Starting BotApplication on RFeldman-mbp2 with PID 88391 (/Users/reed.feldman/generated-bots/fxBot/target/classes started by reed.feldman in /Users/reed.feldman/generated-bots/fxBot)
+2020-11-10 16:26:58,438 DEBUG [main] com.symphony.certification.fxbot.BotApplication: Running with Spring Boot v2.2.2.RELEASE, Spring v5.2.2.RELEASE
+2020-11-10 16:26:58,440 INFO [main] com.symphony.certification.fxbot.BotApplication: No active profile set, falling back to default profiles: default
+2020-11-10 16:26:59,934 INFO [main] com.symphony.bdk.bot.sdk.elements.config.ElementsBeanFactoryProcessor: Scanning for elements handlers found 3 beans
+2020-11-10 16:26:59,990 INFO [main] com.symphony.bdk.bot.sdk.event.config.EventBeanFactoryProcessor: Scanning for event handlers found 2 beans
+2020-11-10 16:27:00,044 INFO [main] com.symphony.bdk.bot.sdk.command.config.AuthProviderBeanFactoryProcessor: Scanning for authentication providers found 2 beans
+2020-11-10 16:27:00,095 INFO [main] com.symphony.bdk.bot.sdk.notification.config.InterceptorBeanFactoryProcessor: Scanning for notification interceptors found 1 beans
+2020-11-10 16:27:00,151 INFO [main] com.symphony.bdk.bot.sdk.monitoring.config.MonitoringBeanFactoryProcessor: Scanning for health indicators/meter binders found 3 beans
+2020-11-10 16:27:00,203 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SsePublisherBeanFactoryProcessor: Scanning for sse publishers found 2 beans
+2020-11-10 16:27:00,256 INFO [main] com.symphony.bdk.bot.sdk.command.config.CommandBeanFactoryProcessor: Scanning for command handlers found 10 beans
+2020-11-10 16:27:00,712 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2020-11-10 16:27:00,724 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:27:00,725 INFO [main] org.apache.catalina.core.StandardService: Starting service [Tomcat]
+2020-11-10 16:27:00,725 INFO [main] org.apache.catalina.core.StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-11-10 16:27:00,822 INFO [main] org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/fxbot]: Initializing Spring embedded WebApplicationContext
+2020-11-10 16:27:00,823 INFO [main] org.springframework.web.context.ContextLoader: Root WebApplicationContext: initialization completed in 2326 ms
+2020-11-10 16:27:00,840 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Loading configuration from src/main/resources/bot-config.json
+2020-11-10 16:27:00,892 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating user...
+2020-11-10 16:27:00,935 INFO [main] authentication.SymBotRSAAuth: Last auth time was 0
+2020-11-10 16:27:00,936 INFO [main] authentication.SymBotRSAAuth: Now is 1605043620936
+2020-11-10 16:27:02,145 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Initializing bot client...
+2020-11-10 16:27:02,154 INFO [main] clients.SymBotClient: Authenticated as fxBot (349026222349201)
+2020-11-10 16:27:02,170 INFO [main] com.symphony.bdk.bot.sdk.symphony.config.SymphonyConfig: Authenticating extension app...
+2020-11-10 16:27:02,482 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Initializing REST client
+2020-11-10 16:27:02,484 INFO [main] com.symphony.bdk.bot.sdk.lib.restclient.config.RestClientConfig: Setting read and connect timeouts to: 35000 ms
+2020-11-10 16:27:02,546 INFO [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Registering Symphony health status to Prometheus endpoint
+2020-11-10 16:27:02,546 DEBUG [main] com.symphony.bdk.bot.sdk.monitoring.SymphonyHealthMeterBinder: Performing health check for Symphony components (prometheus)
+2020-11-10 16:27:02,870 DEBUG [main] com.symphony.bdk.bot.sdk.lib.restclient.RestClientImpl: Performing request GET https://develop2.symphony.com/pod/v1/podcert
+2020-11-10 16:27:03,335 INFO [main] com.symphony.bdk.bot.sdk.extapp.authentication.UserInfoFilter: Initializing UserInfo Filter
+2020-11-10 16:27:03,336 INFO [main] authentication.jwt.AuthenticationFilter: Starting authentication filter
+2020-11-10 16:27:03,796 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [spreadsheetUpdateEvent, spreadsheetPresenceEvent]
+2020-11-10 16:27:03,803 INFO [main] com.symphony.bdk.bot.sdk.lib.templating.config.TemplateServiceConfig: Initializing Template Engine
+2020-11-10 16:27:03,907 INFO [main] com.symphony.bdk.bot.sdk.lib.jsonmapper.config.JsonMapperConfig: Initializing JSON mapper
+2020-11-10 16:27:04,007 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding IM listener
+2020-11-10 16:27:04,008 INFO [main] services.DatafeedEventsService: Using previous datafeed id: 12188ba2-666e-4d7c-a4cb-be9a527c76c7
+2020-11-10 16:27:04,012 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Room listener
+2020-11-10 16:27:04,013 INFO [main] com.symphony.bdk.bot.sdk.symphony.DatafeedClientImpl: Adding Elements listener
+2020-11-10 16:27:04,290 INFO [main] org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver: Exposing 3 endpoint(s) beneath base path '/monitor'
+2020-11-10 16:27:04,442 INFO [main] com.symphony.bdk.bot.sdk.webapi.accesscontrol.BasicAuthConfig: No Auth info!
+2020-11-10 16:27:04,446 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: Ant [pattern='/**', OPTIONS], []
+2020-11-10 16:27:04,483 INFO [main] org.springframework.security.web.DefaultSecurityFilterChain: Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d0e46dd, org.springframework.security.web.context.SecurityContextPersistenceFilter@389fad5b, org.springframework.security.web.header.HeaderWriterFilter@74fd5fb0, org.springframework.security.web.authentication.logout.LogoutFilter@7d816d32, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@285b63eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e895acb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@318353, org.springframework.security.web.session.SessionManagementFilter@1ead6e20, org.springframework.security.web.access.ExceptionTranslationFilter@22d23c27, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@70313b0b]
+2020-11-10 16:27:04,489 INFO [main] com.symphony.bdk.bot.sdk.sse.config.SseConfig: Initializing SSE thread pool
+2020-11-10 16:27:04,489 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:27:04,491 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'sseTaskExecutor'
+2020-11-10 16:27:04,495 INFO [main] com.symphony.bdk.bot.sdk.event.config.AsyncConfig: Initializing bot thread pool
+2020-11-10 16:27:04,496 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService
+2020-11-10 16:27:04,497 INFO [main] org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor: Initializing ExecutorService 'botTaskExecutor'
+2020-11-10 16:27:04,515 INFO [main] springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping: Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-11-10 16:27:04,738 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:27:04,739 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.QuoteRegistrationHandler
+2020-11-10 16:27:04,740 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: quo-register-form
+2020-11-10 16:27:04,747 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:27:04,752 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.TemplateHandler
+2020-11-10 16:27:04,752 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: template-form
+2020-11-10 16:27:04,756 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:27:04,756 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.elements.FxelementHandler
+2020-11-10 16:27:04,756 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: fxelement
+2020-11-10 16:27:04,759 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:27:04,762 INFO [main] com.symphony.bdk.bot.sdk.event.EventDispatcherImpl: Registering handler for event: com.symphony.bdk.bot.sdk.event.model.UserJoinedRoomEvent
+2020-11-10 16:27:04,767 INFO [main] com.symphony.bdk.bot.sdk.sse.SsePublisherRouterImpl: Registering sse publisher for event type: [event1, event2]
+2020-11-10 16:27:04,770 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:27:04,771 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.LoginCommandHandler
+2020-11-10 16:27:04,773 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:27:04,774 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelloCommandHandler
+2020-11-10 16:27:04,776 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:27:04,777 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.ShowWatchlistCommandHandler
+2020-11-10 16:27:04,780 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:27:04,780 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:27:04,783 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:27:04,784 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering default filter: com.symphony.certification.fxbot.command.DefaultBotMentionHandler
+2020-11-10 16:27:04,786 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:27:04,787 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.CreateNotificationCommandHandler
+2020-11-10 16:27:04,789 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:27:04,790 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AddToWatchlistCommandHandler
+2020-11-10 16:27:04,794 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:27:04,794 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.BroadcastMessageCommandHandler
+2020-11-10 16:27:04,797 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:27:04,798 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.QuoteCommandHandler
+2020-11-10 16:27:04,800 INFO [main] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl: Registering command handler: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:27:04,801 INFO [main] com.symphony.bdk.bot.sdk.command.CommandFilterImpl: Registering filter for command: com.symphony.certification.fxbot.command.AttachmentCommandHandler
+2020-11-10 16:27:04,816 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Context refreshed
+2020-11-10 16:27:04,829 INFO [main] springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper: Found 1 custom documentation plugin(s)
+2020-11-10 16:27:04,873 INFO [main] springfox.documentation.spring.web.scanners.ApiListingReferenceScanner: Scanning for api listing references
+2020-11-10 16:27:05,041 INFO [main] org.apache.coyote.http11.Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2020-11-10 16:27:05,066 INFO [main] org.springframework.boot.web.embedded.tomcat.TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path '/fxbot'
+2020-11-10 16:27:05,071 INFO [main] com.symphony.certification.fxbot.BotApplication: Started BotApplication in 7.323 seconds (JVM running for 7.785)
+2020-11-10 16:27:19,447 DEBUG [pool-2-thread-2] com.symphony.bdk.bot.sdk.event.EventListener: onIMMessage
+2020-11-10 16:27:20,034 DEBUG [pool-2-thread-2] com.symphony.bdk.bot.sdk.event.InternalEventListenerImpl {streamId=HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA, userId=349026222344902, transactionId=ddf0a0f9-a3bd-4db4-9588-c016d5dff240}: Received message in IM HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA
+2020-11-10 16:27:20,034 DEBUG [pool-2-thread-2] com.symphony.bdk.bot.sdk.command.CommandFilterImpl {streamId=HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA, userId=349026222344902, transactionId=ddf0a0f9-a3bd-4db4-9588-c016d5dff240}: Filtering message
+2020-11-10 16:27:20,039 DEBUG [bot-thread-pool1] com.symphony.bdk.bot.sdk.command.CommandDispatcherImpl {streamId=HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA, userId=349026222344902, transactionId=ddf0a0f9-a3bd-4db4-9588-c016d5dff240}: Looking for command handler for com.symphony.certification.fxbot.command.HelpCommandHandler
+2020-11-10 16:27:20,039 DEBUG [bot-thread-pool1] com.symphony.bdk.bot.sdk.command.CommandHandler {streamId=HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA, userId=349026222344902, transactionId=ddf0a0f9-a3bd-4db4-9588-c016d5dff240}: Received command MessageEvent(messageId=P6N2ML5VO5wg0F71nsbKcX___opL8bHvbQ, timestamp=1605043637776, message=@FxBot /help, rawMessage=<div data-format="PresentationML" data-version="2.0" class="wysiwyg"><p><span class="entity" data-entity-id="0">@FxBot</span> /help</p></div>, data={"0":{"id":[{"type":"com.symphony.user.userId","value":"349026222349201"}],"type":"com.symphony.user.mention"}}, attachments=[], externalRecipients=false, diagnostic=null, userAgent=DESKTOP-43.0.0-10917-MacOSX-10.14.6-Chrome-86.0.4240.183, originalFormat=com.symphony.messageml.v2, user=UserDetails(userId=349026222344902, email=reed.feldman@symphony.com, firstName=Reed, lastName=Feldman, displayName=Reed Feldman (Develop 2), username=reed.feldman@symphony.com), stream=StreamDetails(streamType=IM, roomName=null, members=[], external=null, crossPod=null))
+2020-11-10 16:27:20,128 DEBUG [bot-thread-pool1] com.symphony.bdk.bot.sdk.symphony.MessageClientImpl {streamId=HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA, userId=349026222344902, transactionId=ddf0a0f9-a3bd-4db4-9588-c016d5dff240}: Sending message to stream: HcBYn32vavgJTVyvi3lMm3___o7N1P5FdA

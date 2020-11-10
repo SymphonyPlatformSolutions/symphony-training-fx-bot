@@ -14,7 +14,8 @@ import java.util.regex.Pattern;
  */
 public class HelpCommandHandler extends CommandHandler {
 
-      private static final String[] DESCRIPTIONS = {
+        private static final String[] DESCRIPTIONS = {
+      "/blah - auto generated help message",
       "/fxelement - auto generated help message",
       "/addtowatchlist - auto generated help message",
       "/hello - simple hello command",

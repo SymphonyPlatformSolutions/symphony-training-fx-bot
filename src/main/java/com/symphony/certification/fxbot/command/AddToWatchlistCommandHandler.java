@@ -2,7 +2,6 @@ package com.symphony.certification.fxbot.command;
 
 import com.symphony.bdk.bot.sdk.command.CommandHandler;
 import com.symphony.bdk.bot.sdk.command.model.BotCommand;
-import com.symphony.bdk.bot.sdk.lib.jsonmapper.JsonMapper;
 import com.symphony.bdk.bot.sdk.lib.restclient.RestClient;
 import com.symphony.bdk.bot.sdk.lib.restclient.model.RestResponse;
 import com.symphony.bdk.bot.sdk.symphony.model.SymphonyMessage;
@@ -16,18 +15,19 @@ import java.util.regex.Pattern;
 
 public class AddToWatchlistCommandHandler extends CommandHandler {
 
+  //NOTE: The following QUOTE_URL leverages a third-party API (AlphaVantage). Please consider any security concerns for the following
+  //network request.  Additionally, this leverages a personal API key. To use, replace the apikey with your own.  Additionally, you may use the
+  // @Value("${samples.quote-command.api-key}") annotation, by adding your key to the application.yaml file.
   private static final String QUOTE_URL = "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD"
           + "&to_currency=%s&apikey=C7G0Q2QOJ80OECGM";
 
-  private static final String ADD_QUOTE_COMMAND = "/addToWatchlist";
 
-  private JsonMapper jsonMapper;
   private RestClient restClient;
   private DataService dataService;
+  private static final String ADD_QUOTE_COMMAND = "/addToWatchlist";
 
   public AddToWatchlistCommandHandler(RestClient restClient, DataService dataService){
     this.restClient = restClient;
-    this.jsonMapper = jsonMapper;
     this.dataService = dataService;
   }
   @Override
@@ -36,7 +36,6 @@ public class AddToWatchlistCommandHandler extends CommandHandler {
         .compile("^@"+ getBotName() + " " + ADD_QUOTE_COMMAND)
         .asPredicate();
   }
-  
   /**
    * Invoked when command matches
    */
@@ -52,13 +51,11 @@ public class AddToWatchlistCommandHandler extends CommandHandler {
         response.setEnrichedTemplateFile("add-quote", iQuote, "com.symphony.ms.currencyQuote",
                 iQuote, "1.0");
       }
-
     }
     else {
       response.setMessage("Please provide the currency you want a quote for");
     }
   }
-
   private Optional<String> getCommandCurrency(String commandMessage){
     String[] commandSplit = commandMessage.split(" " + ADD_QUOTE_COMMAND + " ");
     if (commandSplit.length > 1) {
